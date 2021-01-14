@@ -67,10 +67,15 @@ namespace RestSharpTest.Steps
         [Then(@"Scottish Terrier appears in the correct position in types of terrier message")]
         public void ThenScottishTerrierAppearsInTheCorrectPositionInTypesOfTerrierMessage()
         {
-            Breeds breedsResponse = new JsonDeserializer().Deserialize<Breeds>(response);
-
-            breedsResponse.Status.Should().Be("success");
+            Breeds breedsResponse = new JsonDeserializer().Deserialize<Breeds>(response);            
             breedsResponse.Message[13].Should().Be("scottish");
+        }
+
+        [Then(@"the status is success")]
+        public void ThenTheStatusIsSuccess()
+        {
+            Breeds breedsResponse = new JsonDeserializer().Deserialize<Breeds>(response);
+            breedsResponse.Status.Should().Be("success");
         }
 
     }

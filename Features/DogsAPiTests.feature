@@ -21,7 +21,12 @@ Scenario: Scottish Terrier is not a type of Hound
 	Then the Scottish Terrier is not a type of Hound
 
 @scottishterrier
-Scenario: Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct position in types of terrier list
-	When the user submits a valid request to the dog API to list all types of terrier
-	Then the Scottish Terrier is a type of Terrier
-	And Scottish Terrier appears in the correct position in types of terrier message
+Scenario:  Scottish Terrier appears in the correct position in types of terrier message
+	When the user submits a valid request to the dog API to list all types of terrier	
+	Then Scottish Terrier appears in the correct position in types of terrier message
+
+	
+@scottishterrier
+Scenario: Status is successfor valid request to list all types of terrier
+	When the user submits a valid request to the dog API to list all types of terrier	
+	Then the status is success

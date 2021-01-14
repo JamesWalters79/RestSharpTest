@@ -252,17 +252,15 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct" +
-            " position in types of terrier list")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scottish Terrier appears in the correct position in types of terrier message")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("scottishterrier")]
-        public virtual void ScottishTerrierIsATypeOfTerrierAndScottishTerrierAppearsInTheCorrectPositionInTypesOfTerrierList()
+        public virtual void ScottishTerrierAppearsInTheCorrectPositionInTypesOfTerrierMessage()
         {
             string[] tagsOfScenario = new string[] {
                     "scottishterrier"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct" +
-                    " position in types of terrier list", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scottish Terrier appears in the correct position in types of terrier message", null, tagsOfScenario, argumentsOfScenario);
 #line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -287,10 +285,47 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("the user submits a valid request to the dog API to list all types of terrier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 26
- testRunner.Then("the Scottish Terrier is a type of Terrier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Scottish Terrier appears in the correct position in types of terrier message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 27
- testRunner.And("Scottish Terrier appears in the correct position in types of terrier message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Status is successfor valid request to list all types of terrier")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("scottishterrier")]
+        public virtual void StatusIsSuccessforValidRequestToListAllTypesOfTerrier()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "scottishterrier"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Status is successfor valid request to list all types of terrier", null, tagsOfScenario, argumentsOfScenario);
+#line 30
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 31
+ testRunner.When("the user submits a valid request to the dog API to list all types of terrier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 32
+ testRunner.Then("the status is success", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
