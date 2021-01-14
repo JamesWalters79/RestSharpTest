@@ -1,21 +1,27 @@
 ﻿Feature: Dogs API Tests
 
 @basic
-Scenario: Status code is OK for valid request to LIST All
+Scenario: Status code is OK for valid request to list all breeds
 	When the user submits a valid request to dog API to list all breeds
 	Then the status code is OK
 
 @basic
-Scenario: Content type is JSON for valid request to LIST All
+Scenario: Content type is JSON for valid request to list all breeds
 	When the user submits a valid request to dog API to list all breeds
 	Then the content type is JSON
 
-@payload
+@scottishterrier
 Scenario: Scottish Terrier is a type of Terrier
 	When the user submits a valid request to the dog API to list all types of terrier
 	Then the Scottish Terrier is a type of Terrier
 
-@payload
+@scottisterrier
 Scenario: Scottish Terrier is not a type of Hound
 	When the user submits a valid request to the dog API to list all types of Hound
 	Then the Scottish Terrier is not a type of Hound
+
+@scottishterrier
+Scenario: Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct position in types of terrier list
+	When the user submits a valid request to the dog API to list all types of terrier
+	Then the Scottish Terrier is a type of Terrier
+	And Scottish Terrier appears in the correct position in types of terrier message

@@ -92,15 +92,15 @@ namespace RestSharpTest.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Status code is OK for valid request to LIST All")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Status code is OK for valid request to list all breeds")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("basic")]
-        public virtual void StatusCodeIsOKForValidRequestToLISTAll()
+        public virtual void StatusCodeIsOKForValidRequestToListAllBreeds()
         {
             string[] tagsOfScenario = new string[] {
                     "basic"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Status code is OK for valid request to LIST All", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Status code is OK for valid request to list all breeds", null, tagsOfScenario, argumentsOfScenario);
 #line 4
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -132,15 +132,15 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Content type is JSON for valid request to LIST All")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Content type is JSON for valid request to list all breeds")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("basic")]
-        public virtual void ContentTypeIsJSONForValidRequestToLISTAll()
+        public virtual void ContentTypeIsJSONForValidRequestToListAllBreeds()
         {
             string[] tagsOfScenario = new string[] {
                     "basic"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Content type is JSON for valid request to LIST All", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Content type is JSON for valid request to list all breeds", null, tagsOfScenario, argumentsOfScenario);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -174,11 +174,11 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scottish Terrier is a type of Terrier")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("payload")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("scottishterrier")]
         public virtual void ScottishTerrierIsATypeOfTerrier()
         {
             string[] tagsOfScenario = new string[] {
-                    "payload"};
+                    "scottishterrier"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scottish Terrier is a type of Terrier", null, tagsOfScenario, argumentsOfScenario);
 #line 14
@@ -214,11 +214,11 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scottish Terrier is not a type of Hound")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("payload")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("scottisterrier")]
         public virtual void ScottishTerrierIsNotATypeOfHound()
         {
             string[] tagsOfScenario = new string[] {
-                    "payload"};
+                    "scottisterrier"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scottish Terrier is not a type of Hound", null, tagsOfScenario, argumentsOfScenario);
 #line 19
@@ -246,6 +246,51 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
 #line 21
  testRunner.Then("the Scottish Terrier is not a type of Hound", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct" +
+            " position in types of terrier list")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Dogs API Tests")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("scottishterrier")]
+        public virtual void ScottishTerrierIsATypeOfTerrierAndScottishTerrierAppearsInTheCorrectPositionInTypesOfTerrierList()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "scottishterrier"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scottish Terrier is a type of Terrier and Scottish Terrier appears in the correct" +
+                    " position in types of terrier list", null, tagsOfScenario, argumentsOfScenario);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 25
+ testRunner.When("the user submits a valid request to the dog API to list all types of terrier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 26
+ testRunner.Then("the Scottish Terrier is a type of Terrier", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 27
+ testRunner.And("Scottish Terrier appears in the correct position in types of terrier message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

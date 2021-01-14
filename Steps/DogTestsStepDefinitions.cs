@@ -2,6 +2,9 @@
 using RestSharp;
 using System.Net;
 using TechTalk.SpecFlow;
+using RestSharpTest.DataEntities;
+using RestSharp.Deserializers;
+using RestSharp.Serialization.Json;
 
 namespace RestSharpTest.Steps
 {
@@ -61,6 +64,14 @@ namespace RestSharpTest.Steps
             response.Content.Should().NotContain("scottish");
         }
 
+        [Then(@"Scottish Terrier appears in the correct position in types of terrier message")]
+        public void ThenScottishTerrierAppearsInTheCorrectPositionInTypesOfTerrierMessage()
+        {
+            Breeds breedsResponse = new JsonDeserializer().Deserialize<Breeds>(response);
+
+            breedsResponse.Status.Should().Be("success");
+            breedsResponse.Message[13].Should().Be("scottish");
+        }
 
     }
 }
