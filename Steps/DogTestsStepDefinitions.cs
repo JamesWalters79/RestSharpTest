@@ -30,5 +30,37 @@ namespace RestSharpTest.Steps
         {
             response.ContentType.Should().Be("application/json");
         }
+
+        [When(@"the user submits a valid request to the dog API to list all types of terrier")]
+        public void WhenTheUserSubmitsAValidRequestToTheDogAPIToListAllTypesOfTerrier()
+        {
+            RestClient client = new RestClient("https://dog.ceo");
+            RestRequest request = new RestRequest("api/breed/terrier/list", Method.GET);
+
+            response = client.Execute(request);
+        }
+
+        [Then(@"the Scottish Terrier is a type of Terrier")]
+        public void ThenTheScottishTerrierIsATypeOfTerrier()
+        {
+            response.Content.Should().Contain("scottish");
+        }
+
+        [When(@"the user submits a valid request to the dog API to list all types of Hound")]
+        public void WhenTheUserSubmitsAValidRequestToTheDogAPIToListAllTypesOfHound()
+        {
+            RestClient client = new RestClient("https://dog.ceo");
+            RestRequest request = new RestRequest("api/breed/hound/list", Method.GET);
+
+            response = client.Execute(request);
+        }
+
+        [Then(@"the Scottish Terrier is not a type of Hound")]
+        public void ThenTheScottishTerrierIsNotATypeOfHound()
+        {
+            response.Content.Should().NotContain("scottish");
+        }
+
+
     }
 }
